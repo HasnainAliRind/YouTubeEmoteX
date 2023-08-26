@@ -1,0 +1,184 @@
+.Mood_Section{
+    display: flex;
+    height: 100%;
+    gap: 12px;
+    width: 97%;
+    padding: 0px 10px;
+    overflow-y: auto;
+    overflow-x: hidden;
+    flex-direction: column;
+}
+.Mood_Section::-webkit-scrollbar {
+    width: 10px;
+    border-radius: 25px;
+}
+
+.Mood_Section::-webkit-scrollbar-track {
+    background-color: #fff;
+    border-radius: 12px;
+    width: 12px;
+}
+
+.Mood_Section::-webkit-scrollbar-thumb {
+    background-color: #868686;
+    border-radius: 12px;
+}
+
+
+
+
+.Mood_Section .upperPart{
+    padding: 8px 15px;
+    display: flex;
+    height: fit-content;
+    width: 97%;
+    justify-content: space-between;
+}
+.upperPart span{
+    font-size: 25px;
+    border-bottom: 1px solid #fd1f1f; 
+    border-radius: 2px;
+}
+.upperPart button{
+    background: #c7c7c7;
+    border: none;
+    color: white;
+    border-radius: 8px;
+    padding: 0px 19px;
+    font-family: montserrat;
+    cursor: pointer;
+    
+}
+.upperPart button:hover{
+    background: #ff4848;
+}
+.moodBox .title{
+    font-size: 25px;
+    letter-spacing: 1px;
+    word-spacing: 10px;
+    font-family: "montserrat";
+}
+.Mood_Section .moodBox{
+    margin: auto;
+    width: 450px;
+    display: flex;
+    padding-bottom: 20px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+   
+    border-radius: 12px;
+}
+.moodBox .moods_list{
+    display: flex;
+    gap: 25px;
+    width: 100%;
+    background: #efefef;
+    padding: 17px 12px;
+    border-radius: 12px;
+    justify-content: space-around;
+   
+}
+.moods_list div{
+    height: fit-content;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    cursor: pointer;
+    width: 60px;
+    padding: 10px 0px;
+    border-radius: 12px;
+    padding: 10px -20px;
+    background: none;
+    position: relative;
+    overflow: hidden;
+    background: none;
+    transition: all .3s linear;
+}
+.moods_list div .background{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    bottom: -200%;
+}
+
+.moods_list div:hover .background{
+    bottom: 0;
+}
+
+.moods_list div img{
+    width: 20px;
+    z-index: 2;
+}
+.moods_list div p{
+    font-size: 12px;
+    margin: 0;
+    z-index: 2;
+}
+
+
+.recommendedVideos{
+    padding: 10px 15px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.recommendedVideos .Categories{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 9px;
+}
+.Categories .category{
+    padding: 6px 15px;
+    border-radius: 25px;
+    background-color: #dddddd6e;
+    cursor: pointer;
+    font-family: montserrat;
+    color: #595959;
+    border: 1px solid #ddd;
+}
+.Categories .category:hover{
+    background: rgb(254 0 0);
+    color: white;
+    border: 1px solid red;
+ 
+}
+
+
+
+@media only screen and (max-width: 650px){
+    .Mood_Section::-webkit-scrollbar {
+        display: none;
+    }
+    .Mood_Section {
+        
+        padding: 0;
+        
+        margin: auto;
+    }
+}
+@media only screen and (max-width: 650px){
+    .Mood_Section .moodBox{
+        width: 90%;
+    }
+    .moodBox .moods_list{
+        flex-wrap: wrap;
+    }
+}
+@media only screen and (max-width: 400px){
+    .Mood_Section .upperPart{
+        width: 93%;
+    }
+}
+@media only screen and (max-width: 390px){
+    .moodBox .title{
+        font-size: 20px;
+    }
+    .upperPart span {
+        font-size: 18px;
+    }
+    .upperPart button{
+        padding: 9px 19px;
+    }
+}

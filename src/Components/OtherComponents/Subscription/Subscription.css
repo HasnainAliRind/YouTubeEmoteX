@@ -1,0 +1,41 @@
+.Subscripiton_Section{
+    display: flex;
+    gap: 12px;
+    width: 97%;
+    padding: 0px 10px;
+    overflow-y: auto;
+    overflow-x: hidden;
+    flex-direction: column;
+    
+}
+.Subscripiton_Section::-webkit-scrollbar {
+    width: 10px;
+    border-radius: 25px;
+}
+
+.Subscripiton_Section::-webkit-scrollbar-track {
+    background-color: #fff;
+    border-radius: 12px;
+    width: 12px;
+}
+
+.Subscripiton_Section::-webkit-scrollbar-thumb {
+    background-color: #868686;
+    border-radius: 12px;
+}
+.Subscripiton_Section .videos{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+.Subscripiton_Section .title{
+    display: flex;
+    justify-content: space-between;
+    padding: 0px 40px;
+}
+.Subscripiton_Section .title p{
+    font-size: 25px;
+    font-family: montserrat;
+}

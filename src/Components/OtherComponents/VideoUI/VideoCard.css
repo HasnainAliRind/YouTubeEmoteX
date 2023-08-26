@@ -1,0 +1,77 @@
+.VideoCard{
+    display: flex;
+    flex-direction: column;
+    width: 380px;
+    gap: 7px;
+    overflow: hidden;
+}
+.VideoCard .Thumbnail {
+    width: 100%;
+    height: 200px;
+    border-radius: 15px;
+}
+.VideoCard .Channel{
+   
+    padding: 0px 4px;
+    overflow: hidden;
+    display: flex;
+    width: 100%;
+    gap: 11px;
+}
+.VideoCard .Channel .ChannelLogo{
+    width: 10%;
+    height: 38px;
+    padding: 12px 13px;
+    overflow: hidden;
+}
+.ChannelLogo div{
+    
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+}
+.Channel .titles{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 85%;
+}
+.Channel .titles p{
+    margin: 0;
+}
+.Channel .titles .VideoTitle{
+    font-weight: bold;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+
+}
+.titles .ChannelName{
+    color: grey;
+}
+
+
+
+@media only screen and (max-width: 810px){
+    .VideoCard{
+      width: 300px;
+    }
+    .Channel .titles .VideoTitle{
+        font-size: 12px;
+    }
+    .titles .ChannelName{
+        font-size: 8px;
+    }
+}
+
+@media only screen and (max-width: 650px){
+    .VideoCard{
+        width: fit-content; 
+        max-width: 100vw;
+        min-width: 98vw;
+    }
+}
+
+@media only screen and (max-width: 400px){
+    .VideoCard .Thumbnail{
+        border-radius: 0;
+    }
+}

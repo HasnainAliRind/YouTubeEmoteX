@@ -1,0 +1,186 @@
+.HomePage {
+    display: grid;
+    grid-template-columns: 5rem auto;
+    column-gap: 20px;
+    height: 87vh;
+}
+
+.HomePage .sideMenus {
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center; */
+}
+
+.sideMenus a {
+    border: none;
+    padding: 20px 12px;
+    font-size: 12px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: none;
+    gap: 6px;
+    cursor: pointer;
+    text-decoration: none;
+    color: #282828;
+}
+.sideMenus a i{
+    font-size: 15px;
+}
+
+.sideMenus a img {
+    width: 22px;
+    height: 21px;
+}
+
+.sideMenus button:hover {
+    background-color: #f8f8f8;
+}
+
+.HomePage .Page {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 40px;
+    height: 83%;
+
+    overflow-y: auto;
+    padding-top: 30px;
+    padding-bottom: 70px;
+}
+
+.Page::-webkit-scrollbar {
+    width: 10px;
+    border-radius: 25px;
+}
+
+.Page::-webkit-scrollbar-track {
+    background-color: #fff;
+    border-radius: 12px;
+    width: 12px;
+}
+
+.Page::-webkit-scrollbar-thumb {
+    background-color: #282828;
+    border-radius: 12px;
+}
+.FourZeroFour{
+    width: 100%;
+    height: 80vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.FourZeroFour .logo{
+    width: 40%;
+}
+.FourZeroFour .logo img{
+    width: 100%;
+}
+.FourZeroFour .title{
+    margin: 0;
+    font-size: 40px;
+}
+.FourZeroFour span{
+    color: red;
+}
+
+
+
+/* ----------------------- spinner ------------------ */
+.lds-ring {
+    display: inline-block;
+    position: relative;
+    width: 80px;
+    height: 80px;
+    margin: auto;
+  }
+  .lds-ring div {
+    box-sizing: border-box;
+    display: block;
+    position: absolute;
+    width: 64px;
+    height: 64px;
+    margin: 8px;
+    border: 8px solid #fff;
+    border-radius: 50%;
+    animation: lds-ring 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
+    border-color: #7d7d7d transparent transparent transparent;
+  }
+  .lds-ring div:nth-child(1) {
+    animation-delay: -0.45s;
+  }
+  .lds-ring div:nth-child(2) {
+    animation-delay: -0.3s;
+  }
+  .lds-ring div:nth-child(3) {
+    animation-delay: -0.15s;
+  }
+  @keyframes lds-ring {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+
+
+/* ----------------------------------- Media Query ----------------------- */
+@media only screen and (max-width: 920px) {
+  .HomePage{
+    display: flex;
+    flex-direction: column-reverse;
+  }
+  .HomePage .sideMenus{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+  }
+  .HomePage .Page{
+    overflow-x: hidden;
+  }
+}
+
+@media only screen and (max-width: 650px){
+ .Page{
+  padding-left: 20px;
+  padding-right: 20px;
+ }
+}
+
+@media only screen and (max-width: 420px){
+  .Page::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+
+.SearchedComponent{
+  width: 100vw;
+  height: 100vh;
+  padding: 8px;
+  display: flex;
+}
+.SearchedComponent .searching_place{
+  display: flex;
+  width: 100%;
+  height: fit-content;
+  gap: 10px;
+}
+.searching_place input{
+  width: 80vw;
+  outline: none;
+  font-family: montserrat;
+  padding: 6px 4px;
+}
+.searching_place button{
+  background: none;
+  border: none;
+}
+.searching_place button a{
+  color: grey;
+  text-decoration: none;
+}
